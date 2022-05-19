@@ -4,10 +4,10 @@ import random
 from numpy.linalg import norm
 
 # board build up
-room_row = 4
-room_col = 4
-room_num_inrow = 3
-room_num_incol = 3
+room_row = 3
+room_col = 3
+room_num_inrow = 2
+room_num_incol = 2
 board = np.zeros((room_row*room_num_incol+2+room_num_incol-1, room_col*room_num_inrow+2+room_num_inrow-1))
 r,c = board.shape
 board[0,:] = -1
