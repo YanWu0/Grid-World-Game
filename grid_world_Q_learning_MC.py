@@ -47,7 +47,6 @@ def printboard(board, agent_pos, exit_pos):
         print(board_pri[c*i: c*(i+1)])
 printboard(board, agent_pos, exit_pos)
 
-#这个要改
 def true_value(reward, dis_factor):
     true_power = [12,12,     11, 11, 13,   10, 12,         8, 8,   9,7,9,   8,8,
                   13,11,11,  12,10,10,12,  11,9,11,11,     8,10,   9,7,7,9,  8,8,6,8,   9,7,7,
