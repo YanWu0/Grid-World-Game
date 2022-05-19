@@ -126,7 +126,7 @@ def train(board, training_num, dis_factor = 0.8, eps=0.3, reward=10):
     pickle.dump(state_value_dic, fw_1)
     fw_1.close()
 
-training_num = 2
+training_num = 200
 #train(board, training_num, 0.4, 0.05, 10)
 
 def test(board, agent_pos, train_num):
@@ -152,7 +152,7 @@ def test(board, agent_pos, train_num):
         agent_pos = action
         printboard(board, agent_pos, exit_pos)
     print('win after '+ str(n)+' steps!')
-test(board, agent_pos, 1)
+test(board, agent_pos, 200)
 
 
 
