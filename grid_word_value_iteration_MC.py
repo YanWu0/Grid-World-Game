@@ -157,5 +157,15 @@ test(board, agent_pos, 200)
 
 
 
-
+'''
+有几点小总结
+（1）上下代之间的 l2-norm 可以到小数点后4位
+（2）但是与true values 之间的 l2-norm 大概在0.8
+（3）discount_factor 越小，与true values 之间的 l2-norm 越小， 猜想可能是较远的state经过discount之后数值较小，所以差值也较小
+（4）收敛不稳定，iteration太多， l2-norm 有起伏，猜想可能与epsilon-greedy policy的表现有关
+（5）spsilon 越大，l2-norm 越差，应该是与greedy policy有关
+（6）spsilon = 0.05 可行，但小于 0.05 则容易循环
+（7）通常不经训练的value=0 表现极差， 经过训练1次的已经靠近optimal policy， 训练2次基本达到optimal policy， 
+     这个可能是因为training code是从exit_pos开始进行训练，比较容易找到exit_pos, 也尝试过从exit_pos 的对角位置开始训练，但是上来直接循环了
+'''
 
